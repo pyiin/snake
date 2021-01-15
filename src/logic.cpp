@@ -54,6 +54,9 @@ void snake::setDirection(std::pair<int,int> dir){
 	if(movement + dir != (std::pair<int,int>){0,0})
 		movement = dir;
 }
+int snake::getDirection(){
+	return movement.first+1+(movement.second == 1?2:0);
+}
 int snake::getXY(int x, int y){
 	return tiles[y * X + x]&7;
 }

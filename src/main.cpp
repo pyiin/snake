@@ -87,7 +87,12 @@ void drawBoard(){
 	for(int x=0; x<SIZEX; x++){
 		for(int y=0; y<SIZEY; y++){
 			//printf("%d\n", snek.getXY(x,y));
-			window.renderGrid(x,y,tileSprites[snek.getXY(x,y)], &grid, src);
+			if(snek.getXY(x,y) == 1){
+				window.renderGrid(x,y,tileSprites[snek.getXY(x,y)], &grid, src, snek.getDirection());
+			}
+			else{
+				window.renderGrid(x,y,tileSprites[snek.getXY(x,y)], &grid, src);
+			}
 			//window.renderGrid(x,y,tileSprites[1], &grid, src);
 		}
 	}

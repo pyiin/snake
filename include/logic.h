@@ -16,6 +16,7 @@ public:
 	void init(int, int);
 	int update();
 	void setDirection(std::pair<int,int> dir);
+	int getDirection();
 	int getXY(int x, int y);
 	void clear();
 private:
