@@ -13,7 +13,7 @@ typedef std::pair<int,int> position;
 
 class snake{
 public:
-	void init(int, int);
+	void init(int x, int y, FILE* fp);
 	int update();
 	void setDirection(std::pair<int,int> dir);
 	int getDirection();
